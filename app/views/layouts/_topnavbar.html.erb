@@ -1,0 +1,21 @@
+<div class="row border-bottom">
+  <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0;">
+    <div class="navbar-header">
+    </div>
+
+    <div class="pull-right">
+      <ul class="nav navbar-top-links navbar-right">
+        <li class="no-margin-right visible-xs-block">
+          <%= link_to destroy_user_session_path, method: 'delete' do %>
+            <i class="fa fa-sign-out"></i>
+          <% end%>
+        </li>
+        <li class="hidden-xs">
+          <%= link_to destroy_user_session_path, method: 'delete' do %>
+            <i class="fa fa-sign-out"></i> Log out
+          <% end %>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>

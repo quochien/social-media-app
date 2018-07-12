@@ -1,0 +1,15 @@
+<script>
+  $(document).ready(function() {
+    <% unless flash[:success].blank? %>
+      toastr.success("<%= flash[:success] %>")
+    <% end %>
+
+    <% unless flash[:danger].blank? %>
+      toastr.error("<%= flash[:danger] %>")
+    <% end %>
+
+    <% unless flash[:alert].blank? %>
+      toastr.error("<%= flash[:alert] %>")
+    <% end %>
+  })
+</script>
