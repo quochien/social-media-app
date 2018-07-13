@@ -26,6 +26,7 @@ gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 gem 'devise', '~> 4.4', '>= 4.4.3'
 gem 'toastr-rails', '~> 1.0', '>= 1.0.3'
+gem 'annotate', '~> 2.7', '>= 2.7.4'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password

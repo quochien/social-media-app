@@ -1,0 +1,43 @@
+<%= render "facebook_app_summary" %>
+<br/>
+<br/>
+
+<div class="row">
+  <div class="col-md-6">
+    <h5>Monitor Tasks</h5>
+  </div>
+  <div class="col-md-6 text-right">
+    <%= link_to "Create Monitor Task", new_facebook_app_monitor_task_path(@facebook_app), class: "btn btn-primary" %>
+  </div>
+</div>
+<br/>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Source Facebook Url</th>
+      <th>Last Posted Facebook Id</th>
+      <th>Last Posted Facebook Time</th>
+      <th></th>
+    </tr>
+  </thead>
+  <% @monitor_tasks.each do |monitor_task| %>
+    <tr>
+      <td><%= monitor_task.source_facebook_url %></td>
+      <td><%= monitor_task.last_posted_facebook_id %></td>
+      <td><%= monitor_task.last_posted_facebook_time %></td>
+      <td>
+        <%= link_to "Edit",
+          edit_facebook_app_monitor_task_path(@facebook_app, monitor_task),
+          class: "btn btn-primary"
+        %>
+        <%= link_to "Delete",
+          facebook_app_monitor_task_path(@facebook_app, monitor_task),
+          class: "btn btn-danger",
+          method: :delete,
+          data: { confirm: "Are you sure?" }
+        %>
+      </td>
+    </tr>
+  <% end %>
+</table>
