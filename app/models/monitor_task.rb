@@ -13,4 +13,5 @@
 
 class MonitorTask < ApplicationRecord
   belongs_to :facebook_app
+  has_many :monitor_task_histories, dependent: :destroy
 end

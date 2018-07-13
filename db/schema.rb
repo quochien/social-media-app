@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_13_015505) do
+ActiveRecord::Schema.define(version: 2018_07_13_075238) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,14 @@ ActiveRecord::Schema.define(version: 2018_07_13_015505) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "page_url"
+  end
+
+  create_table "monitor_task_histories", force: :cascade do |t|
+    t.integer "monitor_task_id", null: false
+    t.string "last_posted_facebook_id"
+    t.string "last_posted_facebook_time"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "monitor_tasks", force: :cascade do |t|
