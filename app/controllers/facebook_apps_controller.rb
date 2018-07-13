@@ -26,7 +26,7 @@ class FacebookAppsController < ApplicationController
 
   def update
     @facebook_app.update_attributes(facebook_app_params)
-    flash[:success] = "Deleted facebook app."
+    flash[:success] = "Updated facebook app."
     redirect_to facebook_apps_path
   end
 
@@ -44,6 +44,6 @@ class FacebookAppsController < ApplicationController
 
   def facebook_app_params
     params.require(:facebook_app)
-          .permit(:name, :app_id, :app_secret)
+          .permit(:name, :app_id, :app_secret, :page_url)
   end
 end
